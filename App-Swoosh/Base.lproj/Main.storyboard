@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -61,6 +60,9 @@
                                 <state key="normal" title="Get Started">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="fO8-N0-tRJ" kind="show" id="VEe-hx-a2D"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -175,10 +177,25 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Fu7-wv-cF4" kind="show" id="OaV-Sc-6YQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zgq-uX-udo">
+                                <rect key="frame" x="0.0" y="10" width="44" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="E4r-de-VMQ"/>
+                                    <constraint firstAttribute="width" constant="44" id="dBc-eK-NUP"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="hi1-UW-569" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSague:" id="w0I-s3-f6R"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Zgq-uX-udo" firstAttribute="leading" secondItem="ssZ-vJ-QiA" secondAttribute="leading" id="6qu-15-ZX3"/>
                             <constraint firstItem="H2z-Sk-Ack" firstAttribute="leading" secondItem="ssZ-vJ-QiA" secondAttribute="leading" id="7kT-Ya-19C"/>
                             <constraint firstItem="l8X-U6-myG" firstAttribute="top" secondItem="H2z-Sk-Ack" secondAttribute="bottom" id="DEM-QK-CXt"/>
                             <constraint firstItem="U8G-jj-aB3" firstAttribute="top" secondItem="oqI-5x-Jxh" secondAttribute="bottom" constant="50" id="GJr-2e-n6t"/>
@@ -190,12 +207,14 @@
                             <constraint firstAttribute="trailing" secondItem="H2z-Sk-Ack" secondAttribute="trailing" id="jMz-b3-pxx"/>
                             <constraint firstItem="oqI-5x-Jxh" firstAttribute="leading" secondItem="ssZ-vJ-QiA" secondAttribute="leading" id="mQp-h4-aRy"/>
                             <constraint firstItem="l8X-U6-myG" firstAttribute="top" secondItem="Aa0-yt-Xkf" secondAttribute="bottom" constant="20" id="omU-1y-p5i"/>
+                            <constraint firstItem="Zgq-uX-udo" firstAttribute="top" secondItem="ssZ-vJ-QiA" secondAttribute="top" constant="10" id="qdg-4E-w4W"/>
                             <constraint firstItem="H2z-Sk-Ack" firstAttribute="top" secondItem="ssZ-vJ-QiA" secondAttribute="top" id="vMs-js-VI2"/>
                             <constraint firstItem="U8G-jj-aB3" firstAttribute="leading" secondItem="ssZ-vJ-QiA" secondAttribute="leadingMargin" id="xCt-C6-Dov"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UFZ-gN-K3j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="hi1-UW-569" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="889" y="133"/>
         </scene>
@@ -296,6 +315,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
